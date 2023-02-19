@@ -19,8 +19,8 @@ class CreateUnitsTable extends Migration
             $table->string('short_name');
             $table->float('allow_decimal')->default(0)->nullable();
             $table->integer('base_unit_id')->nullable();
-            $table->float('base_unit_multiplier')->default(0)->nullable();
-            $table->float('base_unit')->default(0)->nullable();
+            $table->float('base_unit_multiplier')->nullable();
+            $table->float('base_unit')->nullable();
             $table->timestamps();
         });
     }
