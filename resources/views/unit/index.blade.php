@@ -106,7 +106,7 @@
                <label for="">Short Name<span class="text-danger">*</span></label>
                <input type="text" name="short_name" id="short_name" placeholder="eg.ATLAS"class="form-control" value="{{old('short_name')}}" required>
             </div>
-            @error('Short_name')
+            @error('short_name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
