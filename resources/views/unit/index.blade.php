@@ -26,7 +26,7 @@
                             <h2><strong>Item List</strong></h2>
                         </div>
                 <div class="span6 pull-right" style="margin-bottom: 10px;text-align:right;padding-right:10px;">
-                <a class="btn btn-primary" href="javascriptvoid(0);" data-toggle="modal" data-target="#unitAdd"><i class="icon-plus p-1"></i>Add Unit</a>
+                <a class="btn btn-primary" href="javascriptvoid(0);" data-toggle="modal" title="add" data-target="#unitAdd"><i class="icon-plus p-1"></i>Add Unit</a>
         </div>
                       <div class="body">
                             <div class="table-responsive">
@@ -53,7 +53,7 @@
                                      <td>{{$item->base_unit_multiplier}}</td>
                                      <td>{{$item->base_unit}}</td>
                                      <td>
-                                        <a href="#" class="float-left btn btn-sm btn-outline-warning"  data-toggle="modal" data-target="#editUnit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="float-left btn btn-sm btn-outline-warning"  data-toggle="modal" title="edit" data-target="#editUnit"><i class="fas fa-edit"></i></a>
                                         <form method="post" action="{{route('unit.destroy',$item->id)}}">
                                             @csrf
                                             @method('delete')
