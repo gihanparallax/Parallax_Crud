@@ -16,7 +16,7 @@
 <p id="copyright">
 &copy;
     <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-     CRUD Application | Created By Gihan Amarasinghe
+     <b>CRUD Application | Created By Gihan Amarasinghe</b>
 </p>
 </div>
 
