@@ -14,9 +14,9 @@
 
 <div class="footer">
 <p id="copyright">
-<b>&copy;
+&copy;
     <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-     CRUD Application | Created By Gihan Amarasinghe</b>
+     <b>CRUD Application | Created By Gihan Amarasinghe</b>
 </p>
 </div>
 
