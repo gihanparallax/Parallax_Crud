@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2023 at 08:28 AM
+-- Generation Time: Feb 19, 2023 at 06:02 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -59,7 +59,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2023_02_17_112529_create_crudoperations_table', 1),
-(10, '2023_02_19_051137_create_units_table', 2);
+(11, '2023_02_19_051137_create_units_table', 2);
 
 -- --------------------------------------------------------
 
@@ -103,8 +103,8 @@ CREATE TABLE `units` (
   `short_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `allow_decimal` double(8,2) DEFAULT 0.00,
   `base_unit_id` int(11) DEFAULT NULL,
-  `base_unit_multiplier` double(8,2) DEFAULT 0.00,
-  `base_unit` double(8,2) DEFAULT 0.00,
+  `base_unit_multiplier` double(8,2) DEFAULT NULL,
+  `base_unit` double(8,2) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -114,9 +114,9 @@ CREATE TABLE `units` (
 --
 
 INSERT INTO `units` (`id`, `actual_name`, `short_name`, `allow_decimal`, `base_unit_id`, `base_unit_multiplier`, `base_unit`, `created_at`, `updated_at`) VALUES
-(1, 'Cobra Axe', 'Axe', 5.00, NULL, 0.00, 0.00, '2023-02-19 01:43:58', '2023-02-19 01:43:58'),
-(2, 'Axio Grinder', 'Grinder', 200.00, NULL, 0.00, 0.00, '2023-02-19 01:44:23', '2023-02-19 01:44:23'),
-(3, 'Wilson Ball', 'Ball', 50.00, NULL, 0.00, 0.00, '2023-02-19 01:44:54', '2023-02-19 01:44:54');
+(1, 'Cobra Axe', 'Axe', 5.00, NULL, NULL, NULL, '2023-02-19 11:29:53', '2023-02-19 11:29:53'),
+(2, 'Axio Grinder', 'Grinder', 5.00, NULL, NULL, NULL, '2023-02-19 11:30:16', '2023-02-19 11:30:16'),
+(3, 'Lion Saw', 'Saq', 10.00, NULL, NULL, NULL, '2023-02-19 11:30:46', '2023-02-19 11:30:46');
 
 -- --------------------------------------------------------
 
@@ -193,7 +193,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
