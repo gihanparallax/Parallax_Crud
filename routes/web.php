@@ -19,5 +19,5 @@ use App\Http\Controllers\UnitController;
 Route::get('/', [UnitController::class, 'index'])->name('unit.index');
 
 
-//Unit Crud Section
+//Unit Crud Operation Section
 Route::resource('/unit',UnitController::class);
