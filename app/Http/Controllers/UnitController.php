@@ -39,6 +39,23 @@ class UnitController extends Controller
 
 
     /**
+     * Add table data in API view
+     *
+     *
+     */
+
+    public function addapiData(Request $request)
+    {
+        $units = new Unit;
+        $units->actual_name = $request->input('actual_name');
+        $units->short_name = $request->input('short_name');
+        $units->allow_decimal = $request->input('allow_decimal');
+        $units->save();
+        return response()->json($units);
+    }
+
+
+    /**
      * Store added data using form
      *
      *

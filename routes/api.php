@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //fetch table data using api
 Route::get('/get-data', [UnitController::class, 'showapiData']);
+
+//add table data using api
+Route::post('/add-data', [UnitController::class, 'addapiData']);
